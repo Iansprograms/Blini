@@ -7,10 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CCF5E2C2A744B6500E432CA /* libarmadillo.12.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCF5E2B2A744B6500E432CA /* libarmadillo.12.4.1.dylib */; };
 		7AC267582A5701BC000092B5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC267572A5701BC000092B5 /* main.cpp */; };
+		7AC267602A57022E000092B5 /* ConfigFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC2675E2A57022E000092B5 /* ConfigFile.cpp */; };
+		7AC267632A5702A4000092B5 /* Field.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC267612A5702A4000092B5 /* Field.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		3CCF5E282A74482600E432CA /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7AC267522A5701BC000092B5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -23,8 +36,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3CCF5E292A74498000E432CA /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lib; path = ../../../../../../../opt/homebrew/Cellar/armadillo/12.4.1/lib; sourceTree = "<group>"; };
+		3CCF5E2B2A744B6500E432CA /* libarmadillo.12.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libarmadillo.12.4.1.dylib; path = ../../../../../../../opt/homebrew/Cellar/armadillo/12.4.1/lib/libarmadillo.12.4.1.dylib; sourceTree = "<group>"; };
+		7A7311362A58070B00685BBE /* Constants.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Constants.hpp; sourceTree = "<group>"; };
 		7AC267542A5701BC000092B5 /* Blini */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Blini; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC267572A5701BC000092B5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		7AC2675E2A57022E000092B5 /* ConfigFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigFile.cpp; sourceTree = "<group>"; };
+		7AC2675F2A57022E000092B5 /* ConfigFile.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ConfigFile.hpp; sourceTree = "<group>"; };
+		7AC267612A5702A4000092B5 /* Field.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Field.cpp; sourceTree = "<group>"; };
+		7AC267622A5702A4000092B5 /* Field.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Field.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +52,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CCF5E2C2A744B6500E432CA /* libarmadillo.12.4.1.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A1553962A5C2E780035B291 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CCF5E2B2A744B6500E432CA /* libarmadillo.12.4.1.dylib */,
+				3CCF5E292A74498000E432CA /* lib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7AC2674B2A5701BC000092B5 = {
 			isa = PBXGroup;
 			children = (
 				7AC267562A5701BC000092B5 /* Blini */,
 				7AC267552A5701BC000092B5 /* Products */,
+				7A1553962A5C2E780035B291 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +89,11 @@
 			isa = PBXGroup;
 			children = (
 				7AC267572A5701BC000092B5 /* main.cpp */,
+				7AC2675E2A57022E000092B5 /* ConfigFile.cpp */,
+				7AC2675F2A57022E000092B5 /* ConfigFile.hpp */,
+				7A7311362A58070B00685BBE /* Constants.hpp */,
+				7AC267612A5702A4000092B5 /* Field.cpp */,
+				7AC267622A5702A4000092B5 /* Field.hpp */,
 			);
 			path = Blini;
 			sourceTree = "<group>";
@@ -72,6 +108,7 @@
 				7AC267502A5701BC000092B5 /* Sources */,
 				7AC267512A5701BC000092B5 /* Frameworks */,
 				7AC267522A5701BC000092B5 /* CopyFiles */,
+				3CCF5E282A74482600E432CA /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -120,6 +157,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AC267582A5701BC000092B5 /* main.cpp in Sources */,
+				7AC267632A5702A4000092B5 /* Field.cpp in Sources */,
+				7AC267602A57022E000092B5 /* ConfigFile.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,11 +215,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /opt/homebrew/Cellar/armadillo/12.4.1/lib;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = /opt/homebrew/Cellar/armadillo/12.4.1/include;
 			};
 			name = Debug;
 		};
@@ -228,10 +269,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /opt/homebrew/Cellar/armadillo/12.4.1/lib;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = /opt/homebrew/Cellar/armadillo/12.4.1/include;
 			};
 			name = Release;
 		};
@@ -239,7 +283,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_NO_COMMON_BLOCKS = NO;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/homebrew/Cellar/armadillo/12.4.1/lib,
+				);
+				"LIBRARY_SEARCH_PATHS[arch=arm64]" = " /opt/homebrew/Cellar/armadillo/12.4.1/lib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = /opt/homebrew/Cellar/armadillo/12.4.1/include;
 			};
 			name = Debug;
 		};
@@ -247,7 +298,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_NO_COMMON_BLOCKS = NO;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/homebrew/Cellar/armadillo/12.4.1/lib,
+				);
+				"LIBRARY_SEARCH_PATHS[arch=arm64]" = " /opt/homebrew/Cellar/armadillo/12.4.1/lib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = /opt/homebrew/Cellar/armadillo/12.4.1/include;
 			};
 			name = Release;
 		};
